@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component with Props</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" crossorigin>
+
+    let rootElement = document.getElementById("myclass");
+          //functional component
+    function Hello(props)
+    {
+      return <div>  Good {props.type} Mr.{props.name}.!!</div>;//JSX
+    }
+
+    //ReactDOM.render(<Hello name="Jane Doe" type="morning"/>, rootElement);
+    //ReactDOM.render([<Hello name="Jane Doe" type="morning"/>,<Hello name="John Doe" type="evening"/>], rootElement);
+    
+    //class component
+    class Hello1 extends React.Component
+    {
+      render(){
+        let mname = this.props.name; //storing to local variable
+        return <div> Hello {mname}, Good {this.props.greeting} !!</div>
+      }
+    }
+
+    //ReactDOM.render(<Hello name="Jane" greeting="morning"/>,rootElement);
+    //ReactDOM.render([<Hello1 name="Jane" greeting="morning"/>, <Hello1 name="John" greeting="evening"/>],rootElement);
+
+    ReactDOM.render([<Hello name="Jane" type="morning"/>, <Hello name="John" type="evening"/>, <Hello1 name="Jane" greeting="morning"/>, <Hello1 name="John" greeting="evening"/>],rootElement);
+
+</script>
+</head>
+<body>
+  <div id="myclass">
+
+  </div>
+</body>
+</html>

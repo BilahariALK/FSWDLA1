@@ -1,0 +1,28 @@
+/*function f1(){
+  console.log('f1');
+}
+
+function f2(){
+  console.log('f2');
+  setTimeout(function() {console.log('fun')}, 1000);
+}
+
+function f3(){
+  console.log('f3');
+}
+
+f1();
+f2();
+f3();
+*/
+
+function printAnything(anything){
+  console.log(anything);
+}
+
+function add(a,b,myCallBack){
+  let c = a+b;
+  myCallBack(c);
+}
+
+add(2,3,printAnything);

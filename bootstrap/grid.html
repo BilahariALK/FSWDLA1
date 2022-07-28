@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 bg-info">4</div>
+            <div class="col-sm-5 bg-warning">5</div>
+            <div class="col-sm-3 bg-danger">3</div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3 bg-info">3</div>
+            <div class="col-sm-4 bg-warning">4</div>
+            <div class="col-sm-5 bg-danger">5</div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 bg-info">4</div>
+            <div class="col-sm-4 bg-warning">4</div>
+            <div class="col-sm-4 bg-danger">4</div>
+        </div>
+    </div>
+
+    <div class="container my-4">
+        <!-- order colums-->
+        <div class="row">
+            <div class="col-sm-4 bg-info order-last">4</div>
+            <div class="col-sm-3 bg-warning">3</div>
+            <div class="col bg-danger order-first">5</div> <!--auto-->
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 bg-info">3</div>
+            <div class="col-md-4 bg-warning">3</div>
+            <div class="col bg-danger">6</div><!--auto-->
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 bg-info">4</div>
+            <div class="col-sm-4 bg-warning">4</div>
+            <div class="col-sm-4 bg-danger">4</div>
+        </div>
+        
+        <div class="row">
+            <!--auto layout-->
+            <div class="col bg-info">4</div>
+            <div class="col bg-warning">4</div>
+            <div class="col bg-danger">4</div>
+        </div>        
+    </div>
+
+    <div class="container my-4">
+        <!--multiple column sizes / applying preferences for different devices -->
+        <div class="row">
+            <div class="col-sm-4 col-md-2 bg-info">4 in sm and 2 in md</div>
+            <div class="col-sm-4 col-md-8 bg-warning">4 in sm and 8 in md</div>
+            <div class="col-sm-4 col-md-2 bg-danger">4 in sm and 2 in md</div> <!--auto-->
+        </div>        
+    </div>
+
+    
+    <div class="container my-4">
+        <!-- applying offset -->
+        <div class="row">
+            <div class="col-sm-4 offset-left-1 bg-info">4 in sm</div>
+            <div class="col-sm-4 bg-warning">4 in sm</div>
+            <div class="col-sm-1 offset-right-2 bg-danger">1 in sm</div> <!--auto-->
+        </div>
+    </div>
+
+    <!-- from shiva-->
+    <div class="container my-5 d-flex justify-content-end">
+        <div class="row"> 
+            <div class="col-sm-4 col-md-2 bg-info">col-sm-4 col-md-2</div>
+            <div class="col-sm-4 col-md-8 bg-warning">col-sm-4 col-md-8</div>
+            <div class="col-sm-4 col-md-2 bg-danger ">col-sm-4 col-md-2</div>
+        </div>
+    </div>
+    
+    <div class="container my-4">
+        <!-- applying text justify -->
+        <div class="row  justify-content-end">
+            <div class="col-sm-4 bg-info">one</div>
+            <div class="col-sm-4 bg-warning">two</div>
+            <div class="col-sm-4 bg-danger">three</div>
+        </div>
+    </div>
+
+    <div class="container my-4">
+        <!-- auto column size -->
+        <div class="row">
+            <div class="bg-info">one</div>
+            <div class="bg-warning">two</div>
+            <div class="bg-danger">three</div>
+            <div class="bg-info">four</div>
+            <div class="bg-warning">five</div>
+            <div class="bg-danger">six</div>
+            <div class="bg-info">seven</div>
+            <div class="bg-warning">eight</div>
+            <div class="bg-danger">nine</div>
+        </div>
+    </div>
+</body>
+</html>
