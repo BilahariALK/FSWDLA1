@@ -2,10 +2,10 @@ import React from 'react';
 
 function Aboutus(props) {
     return (
-            <div class="container">
+            <div className="container">
 
-            <div class="row">
-            <div class="col-12 col-sm-10 mt-4">
+            <div className="row">
+            <div className="col-12 col-sm-10 mt-4">
         <p> 
         Welcome to BuyBest, your number one source for all phones and 
         gadgets.<br/> </p> <p> We are dedicated to giving you the very best, with a focus on 
