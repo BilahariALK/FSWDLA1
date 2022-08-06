@@ -1,0 +1,72 @@
+npx create-react-app routing
+cd routing
+create components folder under src
+npm i react-router-dom --save
+
+import logo from './logo.svg';
+import './App.css';
+import {BrowserRouter as Router, Routes,Route} from 'react-router-dom'
+import { Aboutus, Home,Contactus, ITHome} from './components/Allinone';
+
+function App() {
+  return (
+    <div className="App">
+    <h1> Welcome to Routing page!</h1>
+
+    { //order does not matter
+    }
+    { /* hello there
+    multi line comment    
+    */ }
+    <Router>
+      <Routes>
+        <Route path='/contactus' element={<Contactus/>} />
+        <Route path='/aboutus' element={<Aboutus/>}/>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/it/home' element={<ITHome/>}/>
+        
+      </Routes>
+    </Router>
+
+    </div>
+  );
+}
+
+export default App;
+
+import React from 'react';
+
+export function Home() {
+    return (
+        <div>
+            <h3> I am home </h3>
+        </div>
+    );
+}
+
+export function Aboutus() {
+    return (
+        <div>
+            <h3>Welcome to About Us page</h3>
+        </div>
+    );
+}
+
+export function Contactus() {
+    return (
+        <div>
+            <h3> Welcome to Contactus page!</h3>
+        </div>
+    );
+}
+
+export function ITHome() {
+    return (
+        <div>
+            <h3> Welcome to IT dept's home page!</h3>
+        </div>
+    );
+}
+
+<script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+

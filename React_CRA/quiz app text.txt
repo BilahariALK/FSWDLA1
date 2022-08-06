@@ -1,0 +1,131 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+	
+
+
+import data from '../data/quiz_data.json'
+import QuizQuestion from './QuizQuestion';
+import React from 'react';
+
+function Quiz(props) {
+    console.log(data.quiz_questions);
+        return (
+            <div>
+               <h1> Welcome to quiz!</h1> 
+               <QuizQuestion/>
+            </div>
+        );
+}
+
+export default Quiz;
+
+
+
+
+import data from '../data/quiz_data.json'
+import QuizQuestion from './QuizQuestion';
+import React, { useState } from 'react';
+
+function Quiz(props) {
+
+
+   let [quiz_position,setQuizPosition] = useState(0);
+
+
+    console.log(data.quiz_questions);
+        return (
+            <div>
+               <h1> Welcome to quiz!</h1> 
+               <QuizQuestion quiz_question={data.quiz_questions[quiz_position] }/>
+            </div>
+        );
+}
+
+export default Quiz;
+
+
+
+import React from 'react';
+
+function QuizQuestion(props) {
+
+    let handleClick = (event) => {
+
+        if(event.currentTarget.value == props.quiz_question.answer){
+            console.log("correct answer!")
+        }
+        else {
+            console.log('wrong')
+        }
+    }
+
+    return (
+        <div>
+            <h3> {props.quiz_question.instruction_text} </h3>
+                    <div className="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                      <input type="radio" onClick= {handleClick} className="btn-check" name="btnradio" id="btncheck1" autoComplete="off" value={props.quiz_question.answer_options[0] }/>
+                      <label className="btn btn-outline-primary" htmlFor="btncheck1">{props.quiz_question.answer_options[0] }</label>
+                    
+                      <input type="radio" onClick= {handleClick} className="btn-check" name="btnradio" id="btncheck2" autoComplete="off" value={props.quiz_question.answer_options[1] }/>
+                      <label className="btn btn-outline-primary" htmlFor="btncheck2">{props.quiz_question.answer_options[1] }</label>
+                    
+                      <input type="radio" onClick= {handleClick} className="btn-check" name="btnradio" id="btncheck3" autoComplete="off" value={props.quiz_question.answer_options[2] }/>
+                      <label className="btn btn-outline-primary" htmlFor="btncheck3">{props.quiz_question.answer_options[2] }</label>
+                   
+                      <input type="radio" onClick= {handleClick} className="btn-check" name="btnradio" id="btncheck4" autoComplete="off" value={props.quiz_question.answer_options[3] }/>
+                      <label className="btn btn-outline-primary" htmlFor="btncheck4">{props.quiz_question.answer_options[3] }</label>
+                 
+                  </div>
+        </div>
+    );
+}
+
+export default QuizQuestion;
+
+
+
+<QuizQuestion quiz_question={data.quiz_questions[quiz_position]} showNextQuestion={showNextQuestionHandler}/>
+
+
+
+
+npx create-react-app routingcheck
+npm install react-router-dom --save
+in App.js  remove header and import browserrouter, routes,route
+create 3 basic components - about, contact,home
+In app.js , add routing code to show the appropriate component based on path
+
+
+
+
+
+
+
+import React from 'react';
+
+function QuizQuestion(props) {
+    return (
+        <div>
+            <h3> This must be the question </h3>
+                    <div className="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                      <input type="radio" className="btn-check" name="btnradio" id="btncheck1" autocomplete="off"/>
+                      <label className="btn btn-outline-primary" for="btncheck1">First One</label>
+                    
+                      <input type="radio" className="btn-check" name="btnradio" id="btncheck2" autocomplete="off"/>
+                      <label className="btn btn-outline-primary" for="btncheck2">Second One</label>
+                    
+                      <input type="radio" className="btn-check" name="btnradio" id="btncheck3" autocomplete="off"/>
+                      <label className="btn btn-outline-primary" for="btncheck3">Third One</label>
+                   
+                      <input type="radio" className="btn-check" name="btnradio" id="btncheck4" autocomplete="off"/>
+                      <label className="btn btn-outline-primary" for="btncheck4">Fourth One</label>
+                 
+                  </div>
+        </div>
+    );
+}
+
+export default QuizQuestion;
+
+
+
